@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture" class="profile-pic">
+            <h2>{{ user_profile.user.first_name }} {{ user_profile.user.last_name }}</h2>
+            <p>Status: <span class="status">{{ user_profile.status }}</span></p>
+            <p>Course: {{ user_profile.course }}</p>
+            <p>Semester: {{ user_profile.semester }}</p>
+            <p>Batch: {{ user_profile.batch }}</p>
+            <p>Roll No: {{ user_profile.roll_number }}</p>
+            <p>Mobile: {{ user_profile.mobile }}</p>
+            <p>Email: {{ user_profile.user.email }}</p>
+        </div>
+
+        <div class="learning-path">
+            <h3>Learning Paths</h3>
+            {% for path in learning_paths %}
+                <div class="path">
+                    <h4>{{ path.title }}</h4>
+                    <p>Total Time: {{ path.total_time }} mins</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="progress-tracking">
+            <h3>Progress Tracking</h3>
+            {% for prog in progress %}
+                <div class="progress">
+                    <h4>{{ prog.learning_path.title }}</h4>
+                    <p>Completed Time: {{ prog.completed_time }} mins</p>
+                    <p>Status: {% if prog.completed %}Completed{% else %}In Progress{% endif %}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
