@@ -28,6 +28,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'skill_dashboard.urls'
 
 TEMPLATES = [
