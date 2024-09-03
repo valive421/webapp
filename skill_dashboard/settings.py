@@ -52,11 +52,11 @@ WSGI_APPLICATION = 'skill_dashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQL_DATABASE', 'sql12729209'),
-        'USER': os.getenv('MYSQL_USER', 'sql12729209'),
-        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'wakXYAhKfK'),
-        'HOST': os.getenv('MYSQL_HOST', 'http://sql12.freesqldatabase.com'),
-        'PORT': os.getenv('MYSQL_PORT', '3306'),
+        'NAME': os.getenv('MYSQL_DATABASE', 'defaultdb'),
+        'USER': os.getenv('MYSQL_USER', 'avnadmin'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'AVNS_z7rcVxzd0o4Hkjxr5jd'),
+        'HOST': os.getenv('MYSQL_HOST', 'mysql-3a6c982d-valive421-ee77.k.aivencloud.com'),
+        'PORT': os.getenv('MYSQL_PORT', '28129'),
     }
 }
 
