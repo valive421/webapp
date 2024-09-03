@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'trrLGX13im/hKL4NWngchGc9zhYIAzNr8NtQnzYg'  # Replace with a real secret key
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['webapp-1-3cpn.onrender.com', 'localhost', '127.0.0.1']
 
