@@ -1,1 +1,2 @@
-web: gunicorn skill_dashboard.wsgi --log-file -
+gunicorn skill_dashboard.wsgi --log-file -
+
