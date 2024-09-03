@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: skill-dashboard
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn skill_dashboard.wsgi --bind 0.0.0.0:8000
+    port: 8000
