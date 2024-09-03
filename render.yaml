@@ -5,6 +5,8 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
+      # In your render.yaml or equivalent setup script
       python manage.py migrate
+
     startCommand: gunicorn skill_dashboard.wsgi --bind 0.0.0.0:8000
     port: 8000
