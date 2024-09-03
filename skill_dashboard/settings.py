@@ -6,7 +6,7 @@ SECRET_KEY = 'trrLGX13im/hKL4NWngchGc9zhYIAzNr8NtQnzYg'  # Replace with a real s
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['webapp-1-3cpn.onrender.com', 'localhost', '127.0.0.1','https://webapp-2-epif.onrender.com']
+ALLOWED_HOSTS = ['webapp-1-3cpn.onrender.com', 'localhost', '127.0.0.1','https://webapp-2-epif.onrender.com','.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
