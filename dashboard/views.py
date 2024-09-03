@@ -4,9 +4,11 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import UserRegistrationForm
 from .models import UserProfile, LearningPath, Resource, Progress
 
+
+
 def register(request):
     if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
+        form = UserRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -17,6 +19,7 @@ def register(request):
     else:
         form = UserRegistrationForm()
     return render(request, 'dashboard/register.html', {'form': form})
+
 
 def user_login(request):
     if request.method == 'POST':
